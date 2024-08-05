@@ -1,0 +1,48 @@
+import { Box, CardContent, Typography } from '@mui/material';
+import CardLayout from '../Custom/CardLayout';
+import { ShoppingCartIcon } from '@mui/icons-material/ShoppingCart';
+
+const Card1 = () => {
+  const List = [
+    { name: 'Product 1', price: 10, icon: <ShoppingCartIcon />, per: 10 },
+    // { name: 'Product 2', price: 20, icon: <ShoppingCartIcon />, per: '2' },
+    // { name: 'Product 3', price: 30, icon: <ShoppingCartIcon />, per: '4' },
+    // { name: 'Product 4', price: 30, icon: <ShoppingCartIcon />, per: '4' },
+  ];
+  return (
+    <Box
+      sx={{
+        flexGrow: 2,
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignContent: 'center',
+        height: '90px',
+      }}
+    >
+      {List.map((item, i) => (
+        <CardLayout key={i} sx={{ minWidth: 275 }}>
+          <CardContent>
+            <Box
+              display='flex'
+              justifyContent='space-between'
+              alignItems='center'
+            >
+              {item.icon}
+              <Typography variant='body2' color='text.secondary'>
+                {item.name}
+              </Typography>
+            </Box>
+            <Typography variant='h4' component='div'>
+              {item.price}
+            </Typography>
+            <Typography variant='body2' color='green'>
+              <span style={{ fontSize: '12px' }}>▲</span> {item.per}%
+            </Typography>
+          </CardContent>
+        </CardLayout>
+      ))}
+    </Box>
+  );
+};
+
+export default Card1;

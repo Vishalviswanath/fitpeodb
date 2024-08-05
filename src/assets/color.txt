@@ -1,0 +1,19 @@
+https://colorhunt.co/palette/070f2b1b1a55535c919290c3
+
+
+sidenav temp
+
+{/* <List>
+            {SplitItems.map((sitem, i) => (
+              <ListItem key={i} disablePadding sx={{ display: 'flex' }}>
+                <ListItemButton>
+                  <ListItemIcon
+                    sx={{ display: 'flex', justifyContent: 'center' }}
+                  >
+                    {sitem.image}
+                  </ListItemIcon>
+                  <ListItemText primary={sitem.name} />
+                </ListItemButton>
+              </ListItem>
+            ))}
+          </List> */}
